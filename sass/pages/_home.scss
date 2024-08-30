@@ -1015,13 +1015,13 @@
         }
         gap: 2rem;
         @media screen and (min-width:1400px){
-            grid-auto-rows: 61.5rem;
+            grid-auto-rows: 53rem;
         }
         @media screen and (min-width:1200px) and (max-width:1399.9px)  {
-            grid-auto-rows: 67.6rem;
+            grid-auto-rows: 57.6rem;
         }
         @media screen and (min-width:992px) and (max-width:1199.9px)  {
-            grid-auto-rows: 70rem;
+            grid-auto-rows: 60rem;
         }
         &__item{
             height: 100%;
