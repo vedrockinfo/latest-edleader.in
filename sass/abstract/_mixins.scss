@@ -1,0 +1,70 @@
+@mixin clearfix {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+@mixin GlobalButtonOne{
+    font-size: 17px;
+    padding: 10px 24px!important;
+    line-height: 1;
+    text-transform: capitalize;
+    border: 1.9px solid $colorWhite;
+    color: $colorWhite;
+    transition: $transition;
+    &:hover{
+        color: $colorWhite;
+        background: $colorPrimary!important;
+        border-color: $colorPrimary;
+    }
+}
+@mixin GlobalButtonTwo{
+    font-size: 17px;
+    padding: 10px 24px;
+    line-height: 1;
+    text-transform: capitalize;
+    border: 1.9px solid $colorPrimary!important;
+    background: $colorPrimary;
+    color: $colorWhite;
+    transition: $transition;
+    &:hover{
+        color: $colorWhite;
+        background: transparent;
+        border-color: $colorWhite!important;
+    }
+}
+@mixin GlobalButtonThree{
+    font-size: 17px;
+    padding: 10px 24px;
+    line-height: 1;
+    text-transform: capitalize;
+    border: 1.9px solid $colorTertiary;
+    background: $colorTertiary;
+    color: $colorWhite!important;
+    transition: $transition;
+    display: block;
+    margin: auto;
+    width: fit-content;
+    &:hover{
+        color: $colorWhite!important;
+        background: transparent;
+        border-color: $colorWhite!important;
+    }
+}
+@mixin GlobalButtonFive{
+    font-size: 17px;
+    padding: 10px 24px;
+    line-height: 1;
+    text-transform: capitalize;
+    border: 1.9px solid $colorWhite!important;
+    background: transparent;
+    color: $colorWhite;
+    transition: $transition;
+    &:hover{
+        color: $colorBlack;
+        background: $colorWhite;
+        border-color: $colorWhite!important;
+    }
+}

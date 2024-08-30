@@ -1,0 +1,128 @@
+footer{
+  background-image: url(../images/program-bg-01.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+      padding: 7rem 0;
+      @include respond (minWidth992){
+        .heading-tertiary{
+          font-size: 2.4rem!important;
+        }
+      }
+      @include respond(maxWidth992) {
+            padding: 5rem 0;
+          }
+  
+          @include respond(maxWidth768) {
+            padding: 3rem 0;
+          }
+      .container{
+          position: relative;
+          h2{
+              color: rgba($colorWhite, $alpha: 1);
+          }
+          .sub-heading{
+            color: $colorTertiary;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            @include respond (minWidth992){
+              font-size: 6rem;
+            }
+          }
+          p, a, i{
+              color: $colorWhite;
+          }
+          .in-person{
+      border: 2px solid rgba($colorWhite, $alpha: 1);
+      transition: $transition;
+      position: relative;
+      @media screen and (min-width:1400px) {
+          height: 160px;
+      }
+      @media screen and (min-width:768px) and (max-width:991.9px) {
+            height: 160px;
+          }
+      @media screen and (min-width:992px) and (max-width:1199.9px) {
+            height: 160px;
+          }
+  
+          @media screen and (min-width:1200px) and (max-width:1399.9px) {
+            height:  160px;
+          }
+      
+      h4{
+        color: $colorWhite;
+        margin-bottom: 0;
+        position: absolute;
+        top: -14px;
+        padding: 0 15px;
+        background: #060350;
+        &.left{
+          left: 20px;
+        }
+        &.right{
+          right: 20px;
+        }
+      }
+      .content-para{
+        padding: 3rem 1rem 2rem;
+        text-align: left;
+        color: rgba($colorWhite, $alpha: 1);
+        
+      }
+    }
+    .venue{
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      h4{
+          display: inline-block;
+          border-bottom: 2px solid rgba($colorWhite, $alpha: 1);
+          padding: 4px 35px 1rem;
+          color: rgba($colorWhite, $alpha: 1);
+          position: relative;
+          &::before, &::after{
+            content: "";
+            background: rgba($colorWhite, $alpha: 1);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 2px;
+            width: 25px;
+          }
+          &::before{
+            left: 0;
+          }
+          &::after{
+            right: 0;
+          }
+          b{
+            display: block;
+            background: rgba($colorWhite, $alpha: 1);
+            width: 2px;
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+            &.left{
+              left: 0;
+            }
+            &.right{
+              right: 0;
+            }
+          }
+      }
+    }
+    .get-in{
+      @include respond (maxWidth768){
+        text-align: center;
+      }
+    }
+      }
+  }
+  .mid{
+        @include respond (maxWidth768){
+          text-align: center;
+          margin-bottom: 2rem;
+          margin-top: 1rem;
+        }
+      }
