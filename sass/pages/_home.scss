@@ -67,6 +67,9 @@
                 text-transform: capitalize;
                 line-height: 1.2;
                 margin-bottom: -11px;
+                @media screen and (min-width:992px) and (max-width:1199.9px) {
+                    font-size: 3.4rem;
+                }
 
                 @include respond (maxWidth575) {
                     font-size: 3rem;
@@ -77,6 +80,9 @@
 
             &:nth-child(2) {
                 padding: 0 0 0 5rem;
+                @media screen and (max-width:1400px) {
+                    padding: 0 0 0 4rem;
+                }
             }
 
             ul {
@@ -89,6 +95,9 @@
                 li {
                     color: $colorWhite;
                     font-size: 2.4rem;
+                    @media screen and (min-width:992px) and (max-width:1399.99px) {
+                        font-size: 18.5px;
+                    }
                     @include respond (maxWidth768){
                         font-size: 1.8rem;
                     }
@@ -170,8 +179,13 @@
     margin-top: 3rem;
 
     .about-sunita {
-        .img-wrapper {
-            img {}
+        @media screen and (min-width:992px) and (max-width:1399.9px) {
+            .col-md-4{
+                width: 448.1px!important;
+            }
+            .col-md-8{
+                width: calc(100% - 448.1px)!important;
+            }
         }
 
         .card {
@@ -377,7 +391,7 @@
             margin-top: 7rem;
 
             li {
-                font-size: 20px;
+                // font-size: 20px;
             }
         }
 
@@ -473,7 +487,13 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
-            opacity: 0.14;
+            opacity: 0.08;
+        }
+    }
+
+    @include respond (maxWidth768){
+        br{
+            display: none;
         }
     }
 
@@ -486,11 +506,17 @@
             &::after {
                 content: "";
                 background: rgba($colorPrimary, $alpha: 1);
-                height: 5px;
+                height: 2px;
                 width: 39.5%;
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
+                @include respond (minWidth1200){
+                    width: 42.5%;
+                }
+                @media screen and (min-width:992px) and (max-width:1199.9px) {
+                    width: 41.5%;
+                }
                 @media screen and (max-width:575px) {
                     width: 30%;
                 }
@@ -601,7 +627,7 @@
 
                 p {
                     margin-top: 10px;
-                    font-size: 18px;
+                    line-height: 1.4;
                 }
 
                 .content-para {
@@ -627,19 +653,19 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 11rem;
-
-  @include respond(maxWidth992) {
-    margin-top: 9rem;
-  }
-
-  @include respond(maxWidth768) {
-    margin-top: 7rem;
-  }
+    
     table{
         background: rgba($colorWhite, $alpha: 1);
         margin-bottom: 1.5rem;
         tr{
+
+            th{
+                @include respond (minWidth768){
+                    font-weight: normal;
+                font-size: 20px;
+                }
+                text-align: center;
+            }
             
             th, td{
                 border-color: rgba($colorTertiary, $alpha: 1);
@@ -716,15 +742,55 @@
 }
 
 .revolutionized{
+    margin-top: 11rem;
+
+  @include respond(maxWidth992) {
+    margin-top: 9rem;
+  }
+
+  @include respond(maxWidth768) {
+    margin-top: 7rem;
+  }
+    @include respond (minWidth992){
+        .col-left{
+            max-width: 40%;
+            flex: 0 0 40%;
+        }
+        .col-right{
+            max-width: 60%;
+            flex: 0 0 60%;
+        }
+    }
+    @include respond (minWidth1200){
+        .col-left{
+            max-width: 34.67%;
+            flex: 0 0 34.67%;
+        }
+        .col-right{
+            max-width: 65.33%;
+            flex: 0 0 65.33%;
+        }
+    }
+    
     p{
         @include respond (minWidth992){
             padding-right: 4rem;
         }
     }
     .img-wrapper{
-        height: 38rem;
-        @include respond (minWidth1200){
-            height: 33rem;
+        height: 44rem;
+        @media screen and (min-width:992px) and (max-width:1400px) {
+            height: 44rem;
+            img{
+                object-position: 100% 70%;
+            }
+        }
+        @include respond (maxWidth992){
+            padding-top: 2rem;
+        }
+        @media screen and (min-width:1400px) {
+            height: 46rem;
+            padding-right: 2rem;
         }
         @include respond (maxWidth768){
             margin-top: 2rem;
@@ -733,7 +799,7 @@
             object-fit: cover;
             width: 100%;
             height: 100%;
-            object-position: center;
+            object-position: 100% 65%;
         }
     }
     .revolutionized-card{
@@ -744,14 +810,13 @@
                 margin: 2rem 0;
             }
         }
-        @media screen and (max-width:992px) and (min-width:1200px) {
-            
-        }
+        
+       
         @include respond (minWidth992){
-            height: 35rem;
+            height: 32rem;
         }
         @include respond (minWidth1200){
-            height: 30rem;
+            height: 29rem;
         }
         img{
             width: 10rem;
@@ -766,6 +831,9 @@
         &__content{
             background: #e6e7e8;
             padding: 50px 20px 20px 20px;
+            @media screen and (max-width:1400px) {
+                padding: 50px 10px 20px 10px;
+            }
             @include respond (minWidth992){
                 position: absolute;
                 bottom: 0;
@@ -778,6 +846,14 @@
 }
 .groundbreaking{
     background: rgba($colorPrimary, $alpha: 1);
+    img{
+        height: 100%;
+    }
+    @include respond (minWidth1200){
+        .content-para {
+            padding-right: 10rem;
+        }
+    }
     h2, p{
         color: rgba($colorWhite, $alpha: 1)!important;
     }
@@ -854,7 +930,7 @@
         background: $copyrightBG;
         width: 100%;
     padding: 20px 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
         .content-para{
             p{
                 font-size: 18px;
@@ -1017,12 +1093,12 @@
         @media screen and (min-width:1400px){
             grid-auto-rows: 53rem;
         }
-        @media screen and (min-width:1200px) and (max-width:1399.9px)  {
-            grid-auto-rows: 57.6rem;
-        }
-        @media screen and (min-width:992px) and (max-width:1199.9px)  {
-            grid-auto-rows: 60rem;
-        }
+        // @media screen and (min-width:1200px) and (max-width:1399.9px)  {
+        //     grid-auto-rows: 57.6rem;
+        // }
+        // @media screen and (min-width:992px) and (max-width:1199.9px)  {
+        //     grid-auto-rows: 60rem;
+        // }
         &__item{
             height: 100%;
             .img-wrapper{
@@ -1214,6 +1290,7 @@
         }
         &:nth-child(even){
             .row{
+                align-items: center;
                 @include respond (minWidth992){
                     flex-direction: row-reverse;
                 }
@@ -1246,7 +1323,8 @@
         padding: 20px 30px;
         display: block;
         margin: 2rem 0;
-        font-size: 20px;
+        font-size: 16px;
+    font-style: normal;
 
         @media screen and (max-width:992px) {
             font-size: 16px;
@@ -1306,7 +1384,7 @@
             img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: cover;object-position: top;
                 border-radius: 5px;
             }
         }
@@ -1357,6 +1435,12 @@
     .owl-item.active:not(.center) {
         .col .card {
             background: #f2f2f2;
+        }
+    }
+
+    .owl-nav {
+        @include respond (minWidth992){
+            justify-content: space-between!important;
         }
     }
 

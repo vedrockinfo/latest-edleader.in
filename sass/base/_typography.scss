@@ -37,6 +37,9 @@ h6 {
   @media screen and (min-width:1399.9px) {
     font-size: 67px;
   }
+  @media screen and (min-width:992px) and (max-width:1399.9px) {
+    font-size: 60px;
+  }
 
   @media screen and (min-width:992.1px) and (max-width:1199.9px) {
     font-size: 48px;
@@ -117,7 +120,7 @@ h6 {
   @include respond (maxWidth768){
     text-align: center;
   }
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   font-size: 44px;
   font-weight: 700;
@@ -125,8 +128,11 @@ h6 {
   span{
     color: $colorPrimary;
   }
-  @media screen and (min-width:992px) and (max-width:1366px) {
-    font-size: 52px;
+  @media screen and (min-width:1200px) and (max-width:1400px) {
+    font-size: 36px;
+  }
+  @media screen and (min-width:992px) and (max-width:1199.9px) {
+    font-size: 36px;
   }
   @include respond(maxWidth992) {
     margin-bottom: 40px;
@@ -164,7 +170,7 @@ h6 {
 
 .heading-tertiary{
   line-height: 1.25em;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   text-transform: capitalize;
   font-size: 20px;
   font-weight: 700;
@@ -210,9 +216,11 @@ h6 {
 .content-para p,
 .content-para li {
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.8;
   font-weight: normal;
-
+  @media screen and (min-width:1400px) {
+    font-size: 17px;
+  }
   &:last-child {
     margin-bottom: 0;
   }
