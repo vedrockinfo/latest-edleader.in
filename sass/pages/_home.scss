@@ -14,6 +14,9 @@
             grid-template-columns: repeat(1, 1fr);
             row-gap: 3rem;
             padding: 12rem 0 4rem 0;
+            @media screen and (max-height:800px) {
+                padding: 8rem 0 4rem 0;
+            }
 
             &__item {
                 img {
@@ -255,7 +258,6 @@
             position: relative;
             margin-left: 10px;
             z-index: 1;
-
             &:nth-child(1) {
                 &::before {
                     background: darken($icon-clr-one, $amount: 10);
@@ -386,6 +388,9 @@
     }
 
     .ecci {
+        @media screen and (min-width:1400px) {
+            padding-left: 12rem!important;
+        }
         @include respond (minWidth992) {
             padding-left: 5rem;
             margin-top: 7rem;
@@ -427,6 +432,10 @@
             position: relative;
             margin: 0 auto 15px;
             width: 27.5rem;
+            @include respond (maxWidth575){
+                width: 19rem;
+            }
+
 
             strong {
                 padding: 5px;
@@ -440,6 +449,10 @@
                 font-family: "Playfair Display", serif;
                 background: #fdfdfd;
                 z-index: 2;
+                @include respond (maxWidth575){
+                    font-size: 22px;
+                }
+    
             }
 
             .start,
@@ -472,6 +485,11 @@
 .our-programms {
     @media screen and (max-width:767.9px) {
         padding-top: 3rem;
+        .tab-pane:first-child{
+            .row .ondayevent{
+                flex-direction: row-reverse;
+            }
+        }
     }
     position: relative;
 
@@ -598,6 +616,8 @@
                 @include respond (minWidth992) {
                     max-width: 66.66%;
                     flex: 0 0 66.66%;
+                    position: relative;
+                    top: -10rem;
                 }
 
                 img {
@@ -607,15 +627,15 @@
                     @include respond (maxWidth992){
                         padding: 2rem;
                     }
-                    @include respond (minWidth1200){
-                        height: 470px;
-                    }
+                    // @include respond (minWidth1200){
+                    //     height: 470px;
+                    // }
                     width: 100%;
                     object-fit: cover;
                     object-position: top;
-                    @media screen and (min-width:992px) and (max-width:1200px) {
-                        height: 530px;
-                    }
+                    // @media screen and (min-width:992px) and (max-width:1200px) {
+                    //     height: 530px;
+                    // }
                 }
             }
 
@@ -641,8 +661,194 @@
 
                     strong {
                         display: block;
+                        margin-bottom: 1rem;
                     }
                 }
+            }
+        }
+    }
+}
+
+.eminents-speakers{
+    .row{
+        @include respond (maxWidth768){
+            row-gap: 2rem;
+        }
+    }
+    .speakers-card{
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    text-align: center;
+    background: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    position: relative;
+    transition: 0.4s ease;
+    height: 100%;
+        .speakers-pics{
+    height: 350px;
+            img{
+                transition: 0.4s ease;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+        .speakers-info{
+            position: relative;
+            padding: 20px 0 0 0;
+            .designation{
+                font-weight: 700;
+    color: rgba($colorWhite, $alpha: 1);
+    background-image: url(../images/program-bg-01.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    line-height: 1.6;
+    font-size: 20px;
+    padding: 10px;
+            }
+            .profile{
+                margin-bottom: 4rem;
+                display: block;
+                text-transform: capitalize;
+                font-family: "Playfair Display", serif;
+            }
+            .name{
+    color: rgba($colorBlack, $alpha: 1);
+    margin-top: 3rem;
+    line-height: 1.6;
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    margin-bottom: 0;
+    @include respond (maxWidth992){
+        font-size: 2.4rem;
+    }
+            }
+            .day{
+                position: absolute;
+                top: -3.6rem;
+                right: 3rem;
+                background-image: url(../images/program-bg-01.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: rgba($colorWhite, $alpha: 1);
+    text-transform: uppercase;
+    height: 75px;
+    width: 75px;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    .d-block{
+        font-size: 36px;
+        line-height: 1;
+        font-weight: 700;
+    }
+            }
+        }
+    }
+}
+
+.guest-of-honour {
+    .row {
+        row-gap: 2rem;
+    }
+
+    .speakers-card {
+        box-shadow: $boxShadow;
+        text-align: center;
+        background: #f7f7f7;
+        border: 1px solid #ccc;
+        padding: 30px;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        transition: $transition;
+        height: 100%;
+
+        @media screen and (min-width:1200px) {
+            min-height: 345px;
+        }
+
+        @media screen and (min-width:1400px) {
+            min-height: 321px;
+        }
+
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            background: $colorSecondary;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 0;
+            transition: $transition;
+        }
+
+        .speakers-pics {
+            overflow: hidden;
+            display: inline-block;
+            border-radius: 50%;
+            margin-bottom: 2rem;
+            outline: 3px solid $colorBlack;
+            border: 3px solid transparent;
+
+            img {
+                transition: $transition;
+                width: 12rem;
+                height: 12rem;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+        .speakers-info {
+            .name {
+                font-weight: 700;
+                color: $colorPrimary;
+                margin-bottom: 0;
+                line-height: 1.6;
+            }
+
+            .designation {
+                font-weight: 300;
+                display: block;
+                margin-bottom: 1rem;
+                border-top: 1px groove;
+                border-bottom: 1px groove;
+                padding: 5px 15px;
+                border-color: rgba($colorBlack, $alpha: 1);
+                font-family: 'Poppins', sans-serif;
+                letter-spacing: 0.1px;
+                color: rgba($colorBlack, $alpha: 1);
+                margin-top: 1rem;
+            }
+
+            .venue {
+                font-weight: 400;
+                color: rgba($colorWhite, $alpha: 1);
+                display: inline-block;
+                border-top: 1px groove;
+                border-bottom: 1px groove;
+                padding: 5px 15px;
+                border-color: rgba($colorWhite, $alpha: 1);
+
+                @include respond (minWidth768) {
+                    //     position: absolute;
+                    // bottom: 0;
+                    // left: 0;
+                    // width: 100%;
+                }
+
+                background: rgba($colorBlack, 1);
             }
         }
     }
@@ -651,8 +857,25 @@
 .program-structure{
     background-image: url(../images/program-bg-01.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
+
+    .nav{
+        button{
+            width: 33.33333%;
+            background-image: url(../images/program-bg-01.jpg);
+            color: rgba($colorWhite, $alpha: 1);
+            background-position: top;
+            background-size: cover;
+            border:1px solid rgba($colorWhite, $alpha: 1);
+            background-repeat: no-repeat;
+            font-weight: 700;
+            &.active{
+                background: rgba($colorWhite, $alpha: 1);
+                color: rgba($colorPrimary, $alpha: 1);
+            }
+        }
+    }
     
     table{
         background: rgba($colorWhite, $alpha: 1);
@@ -661,8 +884,8 @@
 
             th{
                 @include respond (minWidth768){
-                    font-weight: normal;
-                font-size: 20px;
+                    font-weight: 700;
+                font-size: 18px;
                 }
                 text-align: center;
             }
@@ -846,6 +1069,12 @@
 }
 .groundbreaking{
     background: rgba($colorPrimary, $alpha: 1);
+    @include respond (maxWidth768){
+        padding: 3rem 0;
+        .content-para{
+            margin-bottom: 2rem;
+        }
+    }
     img{
         height: 100%;
     }
@@ -1032,7 +1261,12 @@
     background-image: url(../images/program-bg-01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
+    @include respond (maxWidth768){
+        br{
+            display: none;
+        }
+    }
     .nav{
         gap: 4px;
         margin-bottom: 2rem;
@@ -1085,13 +1319,13 @@
     }
     .takeways-grid{
         display: grid;
-        grid-template-columns: 62.5% 35.9%;
+        grid-template-columns: 66.5% 31.9%;
         @include respond (maxWidth768){
             grid-template-columns: auto;
         }
         gap: 2rem;
         @media screen and (min-width:1400px){
-            grid-auto-rows: 53rem;
+            grid-auto-rows: 58.5rem;
         }
         // @media screen and (min-width:1200px) and (max-width:1399.9px)  {
         //     grid-auto-rows: 57.6rem;
@@ -1139,7 +1373,9 @@
                 }
             }
             .content-para{
-
+                p{
+                    line-height: normal;
+                }
             }
         }
     }
@@ -1230,8 +1466,45 @@
 }
 .moot-rollout {
     background: rgba($colorPrimary, $alpha: 1);
+    .img-wrapper{
+        @include respond (maxWidth992){
+            margin-top: 2rem;
+        }
+    }
+    .col-lg-5{
+        @include respond (minWidth992){
+            padding-left: 0!important;
+        }
+    }
+    .d-lg-flex{
+        @include respond (maxWidth768){
+            text-align: center;
+        }
+        @include respond (minWidth992){
+                justify-content: space-between;
+                padding-right: 4rem;
+                position: relative;
+                align-items: baseline;
+        top: -15px;
+        }
+    }
+    .on-demand{
+        background: rgba($colorWhite, $alpha: 1);
+        line-height: 2;
+    padding: 0 15px;
+    color: rgba($colorPrimary, $alpha: 1);
+    border-radius: 4px;
+    @include respond (maxWidth768){
+        margin: 7px 0;
+        display: inline-block;
+    }
+    }
     .content-para {
-
+        p{
+            @include respond (minWidth992){
+                padding-right: 3rem!important;
+            }
+        }
 
         .moot-box {
             background: rgba($colorPrimary, $alpha: 1);
@@ -1256,6 +1529,26 @@
 .synergy-awards{
     .heading-tertiary{
         padding-top: 1rem;
+    }
+    .award-area{
+        @include respond (minWidth992){
+            height: 100%;
+        }
+        .awards-pic{
+            @include respond (maxWidth992){
+                margin-top: 2rem;
+            }
+            height: calc(100% - 54px);
+            .awards-pic-grid{
+                height: 100%;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: bottom;
+                }
+            }
+        }
     }
     .real-ch-grid{
         display: grid;
@@ -1283,6 +1576,20 @@
     }
 }
 .harvard-section {
+    .rebuild{
+        @media screen and (min-width:1400px) {
+            height: 465px;
+            margin-left: 8rem;
+        }
+        @media screen and (min-width:1200px) and (max-width:1399.9px) {
+            height: 490px;
+            object-fit: cover;
+        margin-left: 50px;
+        }
+        @media screen and (min-width:992px) and (max-width:1199.9px) {
+            height: auto;
+        }
+    }
     .harvar-inner-section{
         
         &:nth-child(odd){
@@ -1335,8 +1642,37 @@
 .conference-area {
     background-image: url(../images/program-bg-01.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
+    .link-wrapper{
+        margin-top: 4rem;
+        text-align: center;
+        .link-first{
+            margin-right: 1rem;
+            color: rgba($colorWhite, $alpha: 1);
+            border-color: rgba($colorWhite, $alpha: 1);
+        }
+        .link-two{
+            margin-left: 1rem;
+            background: rgba($colorWhite, $alpha: 1);
+            color: rgba($colorPrimary, $alpha: 1);
+            border-color: rgba($colorWhite, $alpha: 1);
+        }
+        a{
+            font-size: 17px;
+    padding: 10px 24px!important;
+    line-height: 1;
+    text-transform: capitalize;
+    border: 1.9px solid;
+    display: inline-block;
+    transition: $transition;
+    &:hover{
+        color: $colorWhite;
+        background: $colorTertiary!important;
+        border-color: $colorTertiary;
+    }
+        }
+    }
     .conference-wrapper {
         display: grid;
         grid-gap: 10px;

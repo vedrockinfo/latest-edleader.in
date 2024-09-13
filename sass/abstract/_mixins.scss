@@ -13,11 +13,12 @@
     text-transform: capitalize;
     border: 1.9px solid $colorWhite;
     color: $colorWhite;
+    display: inline-block;
     transition: $transition;
     &:hover{
         color: $colorWhite;
-        background: $colorPrimary!important;
-        border-color: $colorPrimary;
+        background: $colorTertiary!important;
+        border-color: $colorTertiary;
     }
 }
 @mixin GlobalButtonTwo{

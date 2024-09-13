@@ -1,7 +1,7 @@
 footer{
   background-image: url(../images/program-bg-01.jpg);
           background-size: cover;
-          background-position: center;
+          background-position: bottom;
           background-repeat: no-repeat;
       padding: 7rem 0;
       @include respond (minWidth992){
@@ -38,17 +38,17 @@ footer{
       transition: $transition;
       position: relative;
       @media screen and (min-width:1400px) {
-          height: 160px;
+          height: 325px;
       }
       @media screen and (min-width:768px) and (max-width:991.9px) {
-            height: 160px;
+            height: 360px;
           }
       @media screen and (min-width:992px) and (max-width:1199.9px) {
-            height: 160px;
+            height: 390px;
           }
   
           @media screen and (min-width:1200px) and (max-width:1399.9px) {
-            height:  160px;
+            height:  365px;
           }
       
       h4{

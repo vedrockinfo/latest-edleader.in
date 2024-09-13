@@ -1,0 +1,104 @@
+.our-speakers{
+    .blog-card{
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+        padding: 3rem;
+        background: rgba($colorWhite, $alpha: 1);
+        border-radius: 2rem;
+        border: 1px solid #ccc;
+        box-shadow: inset -5px -5px 5px rgba(255,255,255,0.2),
+       inset 5px 5px 5px rgba(0,0,0,0.1);
+       transition: all 0.5s;
+       &:hover{
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 8px;
+        background: #f7f7f7;
+       }
+       @include respond (maxWidth992){
+        flex-direction: column;
+        align-items: center;
+        .heading-tertiary{
+            margin-bottom: 5px;
+        }
+       }
+    }
+    figure{
+        text-align: center;
+        img{
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            border: 2px solid $colorWhite;
+            outline: 2px solid $colorTertiary;
+            margin-bottom: 1rem;
+            display: inline-block;
+            
+        }
+    }
+    figcaption{
+        p{
+            font-weight: 500;
+            color: $colorTertiary;
+            padding: 0 2rem;
+        }
+    }
+    #pagination {
+        margin-top: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        @include respond (maxWidth768){
+    margin-left: auto;
+    margin-right: auto;
+        }
+        @media screen and (min-width:320px) and (max-width:768px) {
+            width: 30rem;
+        }
+        @media screen and (max-width:319.9px) {
+            width: 80%;
+        }
+      }
+      
+      .pagination-item {
+        display: inline-block;
+        padding: 10px 15px;
+        cursor: pointer;
+        background-image: url(../images/hero-bg-01.jpg);
+        color: #fff;
+        border-radius: 4px;
+        background-position: right;
+    background-size: cover;
+      }
+      
+      .pagination-item.active {
+        background-color: $colorTertiary;
+        background-image: none;
+      }
+}
+
+.awradee-list{
+    background: #f2f2f2;
+    .nameOnly{
+        margin: 5rem 0;
+    }
+    table {
+        table-layout: fixed;
+        width: 100%;
+        text-transform: capitalize;
+        td, th{
+            padding: 20px 10px;
+            border-width: 4px;
+            border-color: #f2f2f2;
+        }
+        td{
+            background: rgba($colorWhite, $alpha: 1);
+        }
+      }
+    thead{
+        background-image: url(../images/program-bg-01.jpg);
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #fff;
+    }
+}

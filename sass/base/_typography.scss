@@ -98,8 +98,9 @@ h6 {
     line-height: 0.85;
     small{
       font-family: inherit;
-      font-size: 55%;
+      font-size: 61%;
       letter-spacing: 1px;
+      font-weight: normal;
     }
 
   @include respond(maxWidth992) {

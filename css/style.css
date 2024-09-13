@@ -138,8 +138,9 @@ h6 {
   line-height: 0.85; }
   .heading-hero-tertiary small {
     font-family: inherit;
-    font-size: 55%;
-    letter-spacing: 1px; }
+    font-size: 61%;
+    letter-spacing: 1px;
+    font-weight: normal; }
   @media only screen and (max-width: 992px) {
     .heading-hero-tertiary {
       font-size: 36px; } }
@@ -530,11 +531,12 @@ h6 {
   text-transform: capitalize;
   border: 1.9px solid #ffffff;
   color: #ffffff;
+  display: inline-block;
   transition: 0.4s ease; }
   .global-btn-one:hover {
     color: #ffffff;
-    background: #34417d !important;
-    border-color: #34417d; }
+    background: #219bff !important;
+    border-color: #219bff; }
 
 .global-btn-two {
   font-size: 17px;
@@ -584,7 +586,7 @@ h6 {
 footer {
   background-image: url(../images/program-bg-01.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   padding: 7rem 0; }
   @media only screen and (min-width: 992.1px) {
@@ -616,16 +618,16 @@ footer {
       position: relative; }
       @media screen and (min-width: 1400px) {
         footer .container .in-person {
-          height: 160px; } }
+          height: 325px; } }
       @media screen and (min-width: 768px) and (max-width: 991.9px) {
         footer .container .in-person {
-          height: 160px; } }
+          height: 360px; } }
       @media screen and (min-width: 992px) and (max-width: 1199.9px) {
         footer .container .in-person {
-          height: 160px; } }
+          height: 390px; } }
       @media screen and (min-width: 1200px) and (max-width: 1399.9px) {
         footer .container .in-person {
-          height: 160px; } }
+          height: 365px; } }
       footer .container .in-person h4 {
         color: #ffffff;
         margin-bottom: 0;
@@ -833,7 +835,11 @@ ul.dropdown-menu {
       .hero-section .global-learning-grid {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 3rem;
-        padding: 12rem 0 4rem 0; }
+        padding: 12rem 0 4rem 0; } }
+  @media screen and (max-width: 768px) and (max-height: 800px) {
+    .hero-section .global-learning-grid {
+      padding: 8rem 0 4rem 0; } }
+    @media screen and (max-width: 768px) {
         .hero-section .global-learning-grid__item img {
           width: 25rem;
           margin: auto;
@@ -1054,6 +1060,9 @@ ul.dropdown-menu {
       margin: auto;
       mix-blend-mode: darken;
       display: block; } }
+  @media screen and (min-width: 1400px) {
+    .reach-sdg .ecci {
+      padding-left: 12rem !important; } }
   @media only screen and (min-width: 992.1px) {
     .reach-sdg .ecci {
       padding-left: 5rem;
@@ -1078,6 +1087,9 @@ ul.dropdown-menu {
       position: relative;
       margin: 0 auto 15px;
       width: 27.5rem; }
+      @media only screen and (max-width: 575px) {
+        .reach-sdg .lead-change li {
+          width: 19rem; } }
       .reach-sdg .lead-change li strong {
         padding: 5px;
         border: 1px solid #34417d;
@@ -1090,6 +1102,9 @@ ul.dropdown-menu {
         font-family: "Playfair Display", serif;
         background: #fdfdfd;
         z-index: 2; }
+        @media only screen and (max-width: 575px) {
+          .reach-sdg .lead-change li strong {
+            font-size: 22px; } }
       .reach-sdg .lead-change li .start,
       .reach-sdg .lead-change li .end {
         background: #1d92f1;
@@ -1111,7 +1126,9 @@ ul.dropdown-menu {
   position: relative; }
   @media screen and (max-width: 767.9px) {
     .our-programms {
-      padding-top: 3rem; } }
+      padding-top: 3rem; }
+      .our-programms .tab-pane:first-child .row .ondayevent {
+        flex-direction: row-reverse; } }
   .our-programms .overlay {
     position: absolute;
     width: 100%;
@@ -1201,7 +1218,9 @@ ul.dropdown-menu {
     @media only screen and (min-width: 992.1px) {
       .our-programms .program-schedule .ondayevent .floating-l {
         max-width: 66.66%;
-        flex: 0 0 66.66%; } }
+        flex: 0 0 66.66%;
+        position: relative;
+        top: -10rem; } }
     .our-programms .program-schedule .ondayevent .floating-l img {
       width: 100%;
       object-fit: cover;
@@ -1212,12 +1231,6 @@ ul.dropdown-menu {
       @media only screen and (max-width: 992px) {
         .our-programms .program-schedule .ondayevent .floating-l img {
           padding: 2rem; } }
-      @media only screen and (min-width: 1200.1px) {
-        .our-programms .program-schedule .ondayevent .floating-l img {
-          height: 470px; } }
-      @media screen and (min-width: 992px) and (max-width: 1200px) {
-        .our-programms .program-schedule .ondayevent .floating-l img {
-          height: 530px; } }
     @media only screen and (min-width: 992.1px) {
       .our-programms .program-schedule .ondayevent .sepevents {
         max-width: 33.33%;
@@ -1234,13 +1247,168 @@ ul.dropdown-menu {
         .our-programms .program-schedule .ondayevent .sepevents .content-para {
           margin: 2rem 2rem 0; } }
       .our-programms .program-schedule .ondayevent .sepevents .content-para strong {
-        display: block; }
+        display: block;
+        margin-bottom: 1rem; }
+
+@media only screen and (max-width: 768px) {
+  .eminents-speakers .row {
+    row-gap: 2rem; } }
+
+.eminents-speakers .speakers-card {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  text-align: center;
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  position: relative;
+  transition: 0.4s ease;
+  height: 100%; }
+  .eminents-speakers .speakers-card .speakers-pics {
+    height: 350px; }
+    .eminents-speakers .speakers-card .speakers-pics img {
+      transition: 0.4s ease;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top; }
+  .eminents-speakers .speakers-card .speakers-info {
+    position: relative;
+    padding: 20px 0 0 0; }
+    .eminents-speakers .speakers-card .speakers-info .designation {
+      font-weight: 700;
+      color: white;
+      background-image: url(../images/program-bg-01.jpg);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      line-height: 1.6;
+      font-size: 20px;
+      padding: 10px; }
+    .eminents-speakers .speakers-card .speakers-info .profile {
+      margin-bottom: 4rem;
+      display: block;
+      text-transform: capitalize;
+      font-family: "Playfair Display", serif; }
+    .eminents-speakers .speakers-card .speakers-info .name {
+      color: black;
+      margin-top: 3rem;
+      line-height: 1.6;
+      font-family: "Playfair Display", serif;
+      font-size: 3rem;
+      margin-bottom: 0; }
+      @media only screen and (max-width: 992px) {
+        .eminents-speakers .speakers-card .speakers-info .name {
+          font-size: 2.4rem; } }
+    .eminents-speakers .speakers-card .speakers-info .day {
+      position: absolute;
+      top: -3.6rem;
+      right: 3rem;
+      background-image: url(../images/program-bg-01.jpg);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      color: white;
+      text-transform: uppercase;
+      height: 75px;
+      width: 75px;
+      padding: 10px 0px;
+      display: flex;
+      flex-direction: column-reverse; }
+      .eminents-speakers .speakers-card .speakers-info .day .d-block {
+        font-size: 36px;
+        line-height: 1;
+        font-weight: 700; }
+
+.guest-of-honour .row {
+  row-gap: 2rem; }
+
+.guest-of-honour .speakers-card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center;
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 30px;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  transition: 0.4s ease;
+  height: 100%; }
+  @media screen and (min-width: 1200px) {
+    .guest-of-honour .speakers-card {
+      min-height: 345px; } }
+  @media screen and (min-width: 1400px) {
+    .guest-of-honour .speakers-card {
+      min-height: 321px; } }
+  .guest-of-honour .speakers-card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; }
+  .guest-of-honour .speakers-card::before {
+    position: absolute;
+    content: "";
+    background: #fff212;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    transition: 0.4s ease; }
+  .guest-of-honour .speakers-card .speakers-pics {
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    outline: 3px solid #000;
+    border: 3px solid transparent; }
+    .guest-of-honour .speakers-card .speakers-pics img {
+      transition: 0.4s ease;
+      width: 12rem;
+      height: 12rem;
+      object-fit: cover;
+      object-position: top; }
+  .guest-of-honour .speakers-card .speakers-info .name {
+    font-weight: 700;
+    color: #34417d;
+    margin-bottom: 0;
+    line-height: 1.6; }
+  .guest-of-honour .speakers-card .speakers-info .designation {
+    font-weight: 300;
+    display: block;
+    margin-bottom: 1rem;
+    border-top: 1px groove;
+    border-bottom: 1px groove;
+    padding: 5px 15px;
+    border-color: black;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1px;
+    color: black;
+    margin-top: 1rem; }
+  .guest-of-honour .speakers-card .speakers-info .venue {
+    font-weight: 400;
+    color: white;
+    display: inline-block;
+    border-top: 1px groove;
+    border-bottom: 1px groove;
+    padding: 5px 15px;
+    border-color: white;
+    background: black; }
 
 .program-structure {
   background-image: url(../images/program-bg-01.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat; }
+  .program-structure .nav button {
+    width: 33.33333%;
+    background-image: url(../images/program-bg-01.jpg);
+    color: white;
+    background-position: top;
+    background-size: cover;
+    border: 1px solid white;
+    background-repeat: no-repeat;
+    font-weight: 700; }
+    .program-structure .nav button.active {
+      background: white;
+      color: #34417d; }
   .program-structure table {
     background: white;
     margin-bottom: 1.5rem; }
@@ -1248,8 +1416,8 @@ ul.dropdown-menu {
       text-align: center; }
       @media only screen and (min-width: 768.1px) {
         .program-structure table tr th {
-          font-weight: normal;
-          font-size: 20px; } }
+          font-weight: 700;
+          font-size: 18px; } }
     .program-structure table tr th, .program-structure table tr td {
       border-color: #219bff;
       border-style: solid;
@@ -1382,6 +1550,11 @@ ul.dropdown-menu {
 
 .groundbreaking {
   background: #34417d; }
+  @media only screen and (max-width: 768px) {
+    .groundbreaking {
+      padding: 3rem 0; }
+      .groundbreaking .content-para {
+        margin-bottom: 2rem; } }
   .groundbreaking img {
     height: 100%; }
   @media only screen and (min-width: 1200.1px) {
@@ -1522,7 +1695,10 @@ ul.dropdown-menu {
   background-image: url(../images/program-bg-01.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: top; }
+  @media only screen and (max-width: 768px) {
+    .takeways br {
+      display: none; } }
   .takeways .nav {
     gap: 4px;
     margin-bottom: 2rem; }
@@ -1568,14 +1744,14 @@ ul.dropdown-menu {
           padding-bottom: 24px; } }
   .takeways .takeways-grid {
     display: grid;
-    grid-template-columns: 62.5% 35.9%;
+    grid-template-columns: 66.5% 31.9%;
     gap: 2rem; }
     @media only screen and (max-width: 768px) {
       .takeways .takeways-grid {
         grid-template-columns: auto; } }
     @media screen and (min-width: 1400px) {
       .takeways .takeways-grid {
-        grid-auto-rows: 53rem; } }
+        grid-auto-rows: 58.5rem; } }
     .takeways .takeways-grid__item {
       height: 100%; }
       .takeways .takeways-grid__item .img-wrapper {
@@ -1609,6 +1785,8 @@ ul.dropdown-menu {
         @media only screen and (max-width: 575px) {
           .takeways .takeways-grid .donor-cards h4 {
             text-align: center; } }
+      .takeways .takeways-grid .donor-cards .content-para p {
+        line-height: normal; }
 
 .research-implementation .img-wrapper {
   position: relative;
@@ -1675,6 +1853,35 @@ ul.dropdown-menu {
 
 .moot-rollout {
   background: #34417d; }
+  @media only screen and (max-width: 992px) {
+    .moot-rollout .img-wrapper {
+      margin-top: 2rem; } }
+  @media only screen and (min-width: 992.1px) {
+    .moot-rollout .col-lg-5 {
+      padding-left: 0 !important; } }
+  @media only screen and (max-width: 768px) {
+    .moot-rollout .d-lg-flex {
+      text-align: center; } }
+  @media only screen and (min-width: 992.1px) {
+    .moot-rollout .d-lg-flex {
+      justify-content: space-between;
+      padding-right: 4rem;
+      position: relative;
+      align-items: baseline;
+      top: -15px; } }
+  .moot-rollout .on-demand {
+    background: white;
+    line-height: 2;
+    padding: 0 15px;
+    color: #34417d;
+    border-radius: 4px; }
+    @media only screen and (max-width: 768px) {
+      .moot-rollout .on-demand {
+        margin: 7px 0;
+        display: inline-block; } }
+  @media only screen and (min-width: 992.1px) {
+    .moot-rollout .content-para p {
+      padding-right: 3rem !important; } }
   .moot-rollout .content-para .moot-box {
     background: #34417d;
     display: inline-block;
@@ -1691,6 +1898,23 @@ ul.dropdown-menu {
 
 .synergy-awards .heading-tertiary {
   padding-top: 1rem; }
+
+@media only screen and (min-width: 992.1px) {
+  .synergy-awards .award-area {
+    height: 100%; } }
+
+.synergy-awards .award-area .awards-pic {
+  height: calc(100% - 54px); }
+  @media only screen and (max-width: 992px) {
+    .synergy-awards .award-area .awards-pic {
+      margin-top: 2rem; } }
+  .synergy-awards .award-area .awards-pic .awards-pic-grid {
+    height: 100%; }
+    .synergy-awards .award-area .awards-pic .awards-pic-grid img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: bottom; }
 
 .synergy-awards .real-ch-grid {
   display: grid;
@@ -1714,6 +1938,21 @@ ul.dropdown-menu {
     @media screen and (max-width: 1399.9px) {
       .synergy-awards .real-ch-grid .real-ch-grid-item {
         font-size: 14px; } }
+
+@media screen and (min-width: 1400px) {
+  .harvard-section .rebuild {
+    height: 465px;
+    margin-left: 8rem; } }
+
+@media screen and (min-width: 1200px) and (max-width: 1399.9px) {
+  .harvard-section .rebuild {
+    height: 490px;
+    object-fit: cover;
+    margin-left: 50px; } }
+
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .harvard-section .rebuild {
+    height: auto; } }
 
 .harvard-section .harvar-inner-section:nth-child(odd) {
   background: #e6e7e8; }
@@ -1754,8 +1993,32 @@ ul.dropdown-menu {
 .conference-area {
   background-image: url(../images/program-bg-01.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat; }
+  .conference-area .link-wrapper {
+    margin-top: 4rem;
+    text-align: center; }
+    .conference-area .link-wrapper .link-first {
+      margin-right: 1rem;
+      color: white;
+      border-color: white; }
+    .conference-area .link-wrapper .link-two {
+      margin-left: 1rem;
+      background: white;
+      color: #34417d;
+      border-color: white; }
+    .conference-area .link-wrapper a {
+      font-size: 17px;
+      padding: 10px 24px !important;
+      line-height: 1;
+      text-transform: capitalize;
+      border: 1.9px solid;
+      display: inline-block;
+      transition: 0.4s ease; }
+      .conference-area .link-wrapper a:hover {
+        color: #ffffff;
+        background: #219bff !important;
+        border-color: #219bff; }
   .conference-area .conference-wrapper {
     display: grid;
     grid-gap: 10px;
@@ -1858,3 +2121,90 @@ ul.dropdown-menu {
     font-weight: 700;
     color: #000;
     letter-spacing: 0.3px; }
+
+.our-speakers .blog-card {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  background: white;
+  border-radius: 2rem;
+  border: 1px solid #ccc;
+  box-shadow: inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s; }
+  .our-speakers .blog-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 8px;
+    background: #f7f7f7; }
+  @media only screen and (max-width: 992px) {
+    .our-speakers .blog-card {
+      flex-direction: column;
+      align-items: center; }
+      .our-speakers .blog-card .heading-tertiary {
+        margin-bottom: 5px; } }
+
+.our-speakers figure {
+  text-align: center; }
+  .our-speakers figure img {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    border: 2px solid #ffffff;
+    outline: 2px solid #219bff;
+    margin-bottom: 1rem;
+    display: inline-block; }
+
+.our-speakers figcaption p {
+  font-weight: 500;
+  color: #219bff;
+  padding: 0 2rem; }
+
+.our-speakers #pagination {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; }
+  @media only screen and (max-width: 768px) {
+    .our-speakers #pagination {
+      margin-left: auto;
+      margin-right: auto; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .our-speakers #pagination {
+      width: 30rem; } }
+  @media screen and (max-width: 319.9px) {
+    .our-speakers #pagination {
+      width: 80%; } }
+
+.our-speakers .pagination-item {
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-image: url(../images/hero-bg-01.jpg);
+  color: #fff;
+  border-radius: 4px;
+  background-position: right;
+  background-size: cover; }
+
+.our-speakers .pagination-item.active {
+  background-color: #219bff;
+  background-image: none; }
+
+.awradee-list {
+  background: #f2f2f2; }
+  .awradee-list .nameOnly {
+    margin: 5rem 0; }
+  .awradee-list table {
+    table-layout: fixed;
+    width: 100%;
+    text-transform: capitalize; }
+    .awradee-list table td, .awradee-list table th {
+      padding: 20px 10px;
+      border-width: 4px;
+      border-color: #f2f2f2; }
+    .awradee-list table td {
+      background: white; }
+  .awradee-list thead {
+    background-image: url(../images/program-bg-01.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff; }
